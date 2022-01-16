@@ -19,6 +19,8 @@ public class LocationMapper {
     position.put("longitude", location.getLongitude());
     position.put("timestamp", location.getTime());
 
+
+
     if (location.hasAltitude()) position.put("altitude", location.getAltitude());
     if (location.hasAccuracy()) position.put("accuracy", (double) location.getAccuracy());
     if (location.hasBearing()) position.put("heading", (double) location.getBearing());
@@ -29,6 +31,7 @@ public class LocationMapper {
     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
       position.put("is_mocked", location.isMock());
     } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR2) {
+        position.put("realtime", location.getElapsedRealtimeNanos());
       position.put("is_mocked", location.isFromMockProvider());
     } else {
       position.put("is_mocked", false);

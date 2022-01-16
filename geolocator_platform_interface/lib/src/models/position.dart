@@ -10,6 +10,7 @@ class Position {
     required this.longitude,
     required this.latitude,
     required this.timestamp,
+    required this.realtime,
     required this.accuracy,
     required this.altitude,
     required this.heading,
@@ -28,7 +29,9 @@ class Position {
   final double longitude;
 
   /// The time at which this position was determined.
-  final DateTime? timestamp;
+  final int? timestamp;
+
+  final int? realtime;
 
   /// The altitude of the device in meters.
   ///
@@ -123,15 +126,11 @@ class Position {
           'The supplied map doesn\'t contain the mandatory key `longitude`.');
     }
 
-    final timestamp = positionMap['timestamp'] != null
-        ? DateTime.fromMillisecondsSinceEpoch(positionMap['timestamp'].toInt(),
-            isUtc: true)
-        : null;
-
     return Position(
       latitude: positionMap['latitude'],
       longitude: positionMap['longitude'],
-      timestamp: timestamp,
+      timestamp: positionMap['timestamp'],
+      realtime: positionMap['realtime'] ?? 0,
       altitude: positionMap['altitude'] ?? 0.0,
       accuracy: positionMap['accuracy'] ?? 0.0,
       heading: positionMap['heading'] ?? 0.0,
@@ -147,7 +146,8 @@ class Position {
   Map<String, dynamic> toJson() => {
         'longitude': longitude,
         'latitude': latitude,
-        'timestamp': timestamp?.millisecondsSinceEpoch,
+        'timestamp': timestamp,
+        'realtime': realtime,
         'accuracy': accuracy,
         'altitude': altitude,
         'floor': floor,
