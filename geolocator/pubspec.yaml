@@ -1,6 +1,6 @@
 name: geolocator
 description: Geolocation plugin for Flutter. This plugin provides a cross-platform (iOS, Android) API for generic location (GPS etc.) functions.
-version: 7.7.1
+version: 8.2.0
 repository: https://github.com/Baseflow/flutter-geolocator/tree/master/geolocator
 issue_tracker: https://github.com/Baseflow/flutter-geolocator/issues?q=is%3Aissue+is%3Aopen
 
@@ -19,6 +19,8 @@ flutter:
         default_package: geolocator_apple
       web:
         default_package: geolocator_web
+      windows:
+        default_package: geolocator_windows
 
 dependencies:
   flutter:
@@ -32,6 +34,8 @@ dependencies:
     path: ../geolocator_apple
   geolocator_web:
     path: ../geolocator_web
+  geolocator_windows:
+    path: ../geolocator_windows
 
 dev_dependencies:
   flutter_test:

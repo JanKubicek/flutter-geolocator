@@ -1,3 +1,57 @@
+## 3.1.3
+
+- Fixes a bug introduced in 3.1.2 where unregistering the status location receiver throws an IllegalArgumentException.
+
+## 3.1.2
+
+- Fixes an issue with the location status service not unregistering the status receiver.
+
+## 3.1.1
+
+- Fixes an issue with the foreground service connection not getting unbound correctly.
+
+## 3.1.0
+
+- Adds support to make a foreground service and continue processing location updates when the application is moved into the background.
+
+## 3.0.4
+
+- Fixes Android embedding v2 warning when compiling the example App.
+
+## 3.0.3
+
+- Added a default `intervalDuration` value of 5000ms to prevent the `getCurrentPosition` method to return a cached Location.
+
+## 3.0.2
+
+- Updated to the latest version of the `geolocator_platform_interface': `4.0.0`.
+
+## 3.0.1
+
+- Replace usage of unofficial GMS library
+
+## 3.0.0+4
+
+- Resolve merge conflict.
+
+## 3.0.0+3
+
+- Fixes cast exception when converting Integer to Long.
+
+## 3.0.0+2
+
+- Fixes NPE when accessing the position stream.
+
+## 3.0.0+1
+
+- Adds `intervalDuration` to the `AndroidSettings` class.
+
+## 3.0.0
+
+- Removed implicit request for permissions when getting a position.
+- Added the [AndroidOptions] class to the `lib` directory.
+- Added the `forceLocationManager` property to the [AndroidOptions] instance.
+
 ## 2.1.0
 
 - Added Approximate Location support for Android 12;
@@ -23,4 +77,3 @@
 ## 1.0.0
 
 - Initial open source release.
-

@@ -1,3 +1,45 @@
+## 8.2.0
+
+- Adds support to make a foreground service on Android and continue processing location updates when the application is moved into the background.
+- Ensures that the `getCurrentPosition` takes the supplied accuracy into account.
+- Improves the speed of acquiring the current position on iOS.
+- Added additional option to `AppleSettings` class to allow the user to configure the background location indicator of `CLocationManager`.
+
+## 8.1.1
+
+- Updated README.md to clarify the use of the geolocator_web package.
+
+## 8.1.0
+
+- Endorses the geolocator_windows package.
+
+## 8.0.5
+
+- Fix code coverage issues by adding iOS specific test for getCurrentPosition
+
+## 8.0.4
+
+- Export `ActivityType` at `geolocator.dart`
+
+## 8.0.3
+
+- Upgraded the geolocator_platform_interface, geolocator_web, geolocator_apple and geolocator_android packages to the latest versions.
+
+## 8.0.2
+
+- Updated README.md to clarify the use of platform specific packages.
+
+## 8.0.1
+
+- Fix "forceAndroidLocationManager" for getLastKnownPosition 
+- Upgrade geolocator_platform_interface to 3.0.1
+- Upgrade geolocator_web to 2.1.1
+
+## 8.0.0
+
+- Removed implicit request for permissions when getting a position.
+- Updated README.md to clarify the use of the `Geolocator.checkPermission()` method.
+
 ## 7.7.1
 
 * Update the documentation on permissions in the README.md.
@@ -473,4 +515,3 @@ Complete rebuild of the geolocator plugin. Please note the this version contains
 ## 0.0.1
 
 - Initial release
-
